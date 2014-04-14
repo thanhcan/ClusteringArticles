@@ -7,7 +7,7 @@
 			(chương trình lấy tất cả bài báo trong thư mục "tintuc", không quan tâm thư mục cha của bài báo
 				việc để sẵn trong các chủ đề để có thể dễ dàng so sánh với output sau khi phân cụm)
 		: bộ từ điển biểu diễn vector các bài báo 7007 từ	(file: "vectorDicWord.txt")
-			(1001 từ xuất hiện nhiều nhất cho mỗi chủ đề lớn từ tập dữ liệu mẫu 420 bài báo)
+			(1001 từ xuất hiện nhiều nhất trong mỗi chủ đề lớn từ tập dữ liệu mẫu 420 bài báo / 7 chủ đề)
 	*) Thư viện
 		: sử dụng công cụ tagger để đánh chỉ mục từ
 		: sử dụng thư viện Gson để đọc các file dữ liệu
