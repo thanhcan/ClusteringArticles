@@ -5,7 +5,7 @@
 	*) Dữ liệu
 		: 1153 bài báo với 7 chủ đề lớn 			(thư mục: "tintuc")
 		: bộ từ điển biểu diễn vector các bài báo 7007 từ	(file: "vectorDicWord.txt")
-			(1001 từ xuất hiện nhiều nhất cho mỗi chủ đề lớn)
+			(1001 từ xuất hiện nhiều nhất cho mỗi chủ đề lớn từ tập dữ liệu mẫu 420 bài báo)
 	*) Thư viện
 		: sử dụng công cụ tagger để đánh chỉ mục từ
 		: sử dụng thư viện Gson để đọc các file dữ liệu
