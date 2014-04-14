@@ -10,8 +10,8 @@
 		: sử dụng công cụ tagger để đánh chỉ mục từ
 		: sử dụng thư viện Gson để đọc các file dữ liệu
 	*) Công thức tính toán:
-		- Chỉ số các vector tính theo các chỉ số DFi, TFi
-		- Độ tương tự giữa các bài báo tính theo công thức Cosim
+		: Chỉ số các vector tính theo các chỉ số DFi, TFi
+		: Độ tương tự giữa các bài báo tính theo công thức Cosim
 	*) Output
 		: thư mục "output" với k thư mục ứng với k cụm được phân lớp
 		: nhận xét: 
