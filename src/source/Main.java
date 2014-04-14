@@ -31,8 +31,8 @@ public class Main {
 		dicWords = new HashMap<String, Integer>();
 		vectorDicWords = new LinkedList<String>();
 		
+		System.out.print("Nhập số cum K: ");
 		BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
-		System.out.print("Nhập số cụm k: ");
 		k = Integer.parseInt(bufferRead.readLine());
 	}
 	
@@ -94,30 +94,33 @@ public class Main {
 		vectorFile.closeRead();
 	}
 	
-	static void readForder() {
+	static void readForder(){
 		int i, p;
 		LinkedList<String> DFi = new LinkedList<>();
 		LinkedList<File> listFiles = new LinkedList<File>();
 		FileReadWrite forderSource = new FileReadWrite();
 		forderSource.createFile("tintuc");
-		File[] listCategory = forderSource.getFile().listFiles();
-		//k = listCategory.length;
+		try {
+			listFiles = forderSource.getAllFile(forderSource.getFile());
+		} catch (IOException e) {
+			System.out.println("ERROR at get all file: " + e.getMessage());
+		}
 		n = 0;
 		
-		for (p = 0; p < k; p++) {
+		/*for (p = 0; p < listCategory.length; p++) {
 			FileReadWrite category = new FileReadWrite();
 			category.createFile(listCategory[p]);
 			try {
 				listFiles = forderSource.getAllFile(category.getFile());
 			} catch(Exception e) {
 				System.out.println(e.getMessage());
-			}
+			}*/
 			
 			VietnameseMaxentTagger tagger = new VietnameseMaxentTagger();
 			TaggerOptions.UNDERSCORE = true;
 			String[] wordsList;
 		
-			System.out.println("Tổng số bài báo category " + p + ": " + listFiles.size());
+			System.out.println("Tổng số bài báo: " + listFiles.size());
 			
 			for (File file : listFiles) {
 				if (file.getName().compareTo("0_LinkOfArticle.txt") == 0 || file.isDirectory()) continue;
@@ -171,10 +174,11 @@ public class Main {
 					System.exit(1);
 				}
 				n++;
+				System.out.println("n: " + n);
 			}
 			
 			System.out.println("\ttổng số từ: " + dicWords.size() + " / số bài báo: " + n);
-		}
+		//}
 	}
 	
 	public static void createVectorOfArticles() {
